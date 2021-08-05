@@ -12,7 +12,9 @@ class Db
 
     protected function __construct()
     {
-        $this->dbh = new \PDO('mysql:host=127.0.0.1;dbname=tests', 'root', 'ucdoss-databases');
+        $pass = "";//your password
+        $user ="";//your login
+        $this->dbh = new \PDO('mysql:host=127.0.0.1;dbname=tests', $user, $pass);
         $this->execute("SET NAMES utf8");
     }
 
